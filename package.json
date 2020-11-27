@@ -1,6 +1,6 @@
 {
   "name": "@jccr/unzipper",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Unzip cross-platform streaming API ",
   "author": "Evan Oxfeld <eoxfeld@gmail.com>",
   "contributors": [
@@ -69,6 +69,7 @@
     "extract"
   ],
   "main": "unzip.js",
+  "types": "unzip.d.ts",
   "scripts": {
     "test": "tap test/*.js --jobs=10 --coverage-report=html --no-browser"
   }
