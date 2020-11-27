@@ -39,13 +39,18 @@
     "setimmediate": "~1.0.4"
   },
   "devDependencies": {
+    "@azure/storage-blob": "^12.3.0",
     "aws-sdk": "^2.77.0",
+    "azurite": "^3.9.0",
+    "cross-spawn": "^6.0.5",
     "dirdiff": ">= 0.0.1 < 1",
     "iconv-lite": "^0.4.24",
     "request": "^2.88.0",
+    "rimraf": "^3.0.2",
     "stream-buffers": ">= 0.2.5 < 1",
     "tap": ">= 0.3.0 < 1",
-    "temp": ">= 0.4.0 < 1"
+    "temp": ">= 0.4.0 < 1",
+    "wait-on": "^5.2.0"
   },
   "directories": {
     "example": "examples",
