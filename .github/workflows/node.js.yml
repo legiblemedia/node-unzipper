@@ -5,9 +5,9 @@ name: Node.js CI
 
 on:
   push:
-    branches: [ azureblob ]
+    branches: [ main ]
   pull_request:
-    branches: [ azureblob ]
+    branches: [ main ]
 
 jobs:
   build:
