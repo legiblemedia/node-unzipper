@@ -50,14 +50,16 @@ export interface Entry extends PassThrough {
     };
 }
 
+export interface Source {
+    stream: (offset: any, length: any) => Promise<Readable>;
+    size: () => Promise<any>;
+}
+
 export function unzip(
-    source: {
-        stream: Readable;
-        size: () => Promise<number>;
-    },
+    source: Source,
     offset: number,
     _password: string
-): Entry;
+): Promise<Entry>;
 
 export namespace Open {
     function buffer(data: Buffer): Promise<CentralDirectory>;
@@ -68,6 +70,7 @@ export namespace Open {
     ): Promise<CentralDirectory>;
     function s3(client: any, params: any): Promise<CentralDirectory>;
     function azureStorageBlob(client: any): Promise<CentralDirectory>;
+    function custom(source: Source): Promise<CentralDirectory>;
 }
 
 export function BufferStream(entry: Entry): Promise<Buffer>;
